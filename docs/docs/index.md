@@ -61,7 +61,7 @@ The `pca_analysis` module provides tools for:
 
 ## Tutorials
 
-Check out the [example notebook](../notebooks/neural_data_analysis_tutorial.ipynb) for a complete walkthrough of:
+Check out the example notebook (`notebooks/neural_data_analysis_tutorial.ipynb` in the repository) for a complete walkthrough of:
 
 1. Generating neural spike trains
 2. Simulating population activity
