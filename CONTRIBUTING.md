@@ -66,64 +66,6 @@ Run the following code or, alternatively, use the VS Code interface to create a 
    git commit -m "Add feature to analyze spike patterns"
    ```
 
-## Getting Started
-
-### Installation for Development
-
-**For beginners:** If you haven't customized the template yet, follow these steps:
-
-**Step 1: Clone the repository (if you haven't already)**
-
-```bash
-git clone https://github.com/AngelaRodrizq/python_4_neuroscience.git
-cd python_4_neuroscience
-```
-
-**Step 2: Create a conda environment (recommended)**
-
-```bash
-# Create a new conda environment with Python 3.13
-conda create --name neuroscience python=3.13
-
-# Activate the environment
-conda activate neuroscience
-```
-
-**Alternative: Using Python's built-in virtual environment**
-
-```bash
-# Create a virtual environment
-python -m venv venv
-
-# Activate it
-# On Mac/Linux:
-source venv/bin/activate
-# On Windows:
-venv\Scripts\activate
-```
-
-**Step 3: Customize the package name (optional)**
-
-```bash
-# This helps you rename the package to match your project
-python setup_project.py
-```
-
-**Step 4: Install all development tools**
-
-```bash
-# Install the package in development mode with all dependencies
-pip install -e ".[develop,notebooks]"
-
-# Install pre-commit hooks for automatic code formatting
-pre-commit install
-```
-
-**What does this do?**
-
-- `pip install -e ".[develop,notebooks]"` installs your package plus all tools needed for development
-- `pre-commit install` sets up automatic code checking whenever you commit changes
-
 ## Development Workflow
 
 ### 1. Code Quality
@@ -137,21 +79,11 @@ We use several tools to maintain code quality:
 
 **For beginners:** Run these commands before committing your changes:
 
+These run automatically when you commit, thanks to the pre-commit hooks. To make sure this is working, try to manually run it with
+
 ```bash
-# Format your code (fixes spacing, line length, etc. automatically)
-black src/ tests/
-
-# Check for issues (this will list any problems to fix)
-ruff check src/ tests/
-
-# Check types (makes sure you're not mixing up different kinds of data)
-mypy src/ tests/
-
-# Run tests (makes sure your changes didn't break anything)
-pytest
+pre-commit run --all-files
 ```
-
-**Tip:** The pre-commit hooks will run Black and Ruff automatically when you commit, so you might not need to run them manually!
 
 ### 2. Testing
 
@@ -195,21 +127,6 @@ pytest --cov=src/python_pkg_template
 pytest tests/test_neural_simulation.py -v
 ```
 
-### 3. Pre-commit Hooks
-
-The pre-commit hooks will automatically:
-
-- Format code with Black
-- Lint with Ruff
-- Check for common issues
-- Strip notebook outputs
-
-These run automatically when you commit, or manually with:
-
-```bash
-pre-commit run --all-files
-```
-
 ### 4. Adding New Features
 
 When adding new features:
@@ -219,20 +136,6 @@ When adding new features:
 3. Document the code with docstrings
 4. Add examples to notebooks if relevant
 5. Update README and docs
-
-## Project Structure
-
-```
-python_4_neuroscience/
-├── src/python_pkg_template/    # Main package code
-│   ├── neural_simulation.py    # Neural data simulation
-│   ├── pca_analysis.py         # PCA analysis tools
-│   └── __init__.py
-├── tests/                       # Test suite
-├── notebooks/                   # Example notebooks
-├── docs/                        # Documentation
-└── scripts/                     # Standalone scripts
-```
 
 ## For Students
 
