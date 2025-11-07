@@ -62,20 +62,43 @@ Before making changes, make sure you understand:
 
 ### Installation for Development
 
-**For beginners:** If you haven't customized the template yet, run the setup script first:
+**For beginners:** If you haven't customized the template yet, follow these steps:
 
+**Step 1: Clone the repository (if you haven't already)**
+```bash
+git clone https://github.com/AngelaRodrizq/python_4_neuroscience.git
+cd python_4_neuroscience
+```
+
+**Step 2: Create a conda environment (recommended)**
+```bash
+# Create a new conda environment with Python 3.13
+conda create --name neuroscience python=3.13
+
+# Activate the environment
+conda activate neuroscience
+```
+
+**Alternative: Using Python's built-in virtual environment**
+```bash
+# Create a virtual environment
+python -m venv venv
+
+# Activate it
+# On Mac/Linux:
+source venv/bin/activate
+# On Windows:
+venv\Scripts\activate
+```
+
+**Step 3: Customize the package name (optional)**
 ```bash
 # This helps you rename the package to match your project
 python setup_project.py
 ```
 
-**Then install all development tools:**
-
+**Step 4: Install all development tools**
 ```bash
-# Clone the repository (if you haven't already)
-git clone https://github.com/AngelaRodrizq/python_template.git
-cd python_template
-
 # Install the package in development mode with all dependencies
 pip install -e ".[develop,notebooks]"
 
@@ -184,7 +207,7 @@ When adding new features:
 ## Project Structure
 
 ```
-python_template/
+python_4_neuroscience/
 ├── src/python_pkg_template/    # Main package code
 │   ├── neural_simulation.py    # Neural data simulation
 │   ├── pca_analysis.py         # PCA analysis tools

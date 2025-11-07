@@ -11,8 +11,9 @@ If you're new to Python or programming, follow these steps carefully:
 ### Prerequisites
 
 Before you begin, make sure you have:
-- **Python 3.10 or newer** installed ([Download here](https://www.python.org/downloads/))
-  - To check: Open a terminal and type `python --version` or `python3 --version`
+- **Conda** (Anaconda or Miniconda) installed ([Download here](https://docs.conda.io/en/latest/miniconda.html))
+  - To check: Open a terminal and type `conda --version`
+  - Alternatively, you can use Python 3.10 or newer directly ([Download here](https://www.python.org/downloads/))
 - **Git** installed ([Download here](https://git-scm.com/downloads))
   - To check: Type `git --version` in your terminal
 - **A text editor** like VS Code ([Download here](https://code.visualstudio.com/))
@@ -28,13 +29,39 @@ Before you begin, make sure you have:
 cd ~/Documents  # or wherever you keep your projects
 
 # Download this template
-git clone https://github.com/AngelaRodrizq/python_template.git
+git clone https://github.com/AngelaRodrizq/python_4_neuroscience.git
 
 # Go into the project folder
-cd python_template
+cd python_4_neuroscience
 ```
 
-#### 2. Customize Your Package Name
+#### 2. Create a Conda Environment (Recommended)
+
+**Creating a conda environment keeps your project dependencies isolated and organized.**
+
+```bash
+# Create a new conda environment with Python 3.13
+conda create --name neuroscience python=3.13
+
+# Activate the environment
+conda activate neuroscience
+```
+
+**Alternative: Using Python directly**
+If you prefer not to use conda, you can use Python's built-in virtual environment:
+
+```bash
+# Create a virtual environment
+python -m venv venv
+
+# Activate it
+# On Mac/Linux:
+source venv/bin/activate
+# On Windows:
+venv\Scripts\activate
+```
+
+#### 3. Customize Your Package Name
 
 **This is important!** You should rename the package to match your project.
 
@@ -55,7 +82,7 @@ The script will ask you to choose a package name. For example:
 - Good: `spike_analyzer`, `neural_data_tools`
 - Bad: `Spike-Analyzer`, `123data`, `my package`
 
-#### 3. Install Your Package
+#### 4. Install Your Package
 
 After running the setup script, install your newly named package:
 
@@ -70,7 +97,7 @@ pip install -e ".[develop,notebooks]"
 
 This might take a few minutes as it downloads required libraries.
 
-#### 4. Verify Everything Works
+#### 5. Verify Everything Works
 
 ```bash
 # Run the tests to make sure everything is set up correctly
@@ -79,7 +106,7 @@ pytest
 # You should see output like "5 passed" - that means it worked!
 ```
 
-#### 5. Start Exploring!
+#### 6. Start Exploring!
 
 Try opening one of the example notebooks:
 
@@ -132,8 +159,12 @@ jupyter notebook
 
 ```bash
 # Clone the repository
-git clone https://github.com/AngelaRodrizq/python_template.git
-cd python_template
+git clone https://github.com/AngelaRodrizq/python_4_neuroscience.git
+cd python_4_neuroscience
+
+# Create and activate a conda environment (recommended)
+conda create --name neuroscience python=3.13
+conda activate neuroscience
 
 # Customize the package name (optional but recommended)
 python setup_project.py
@@ -174,7 +205,7 @@ jupyter notebook notebooks/neural_data_analysis_tutorial.ipynb
 ## Package Structure
 
 ```
-python_template/
+python_4_neuroscience/
 ├── src/python_pkg_template/    # Main package code
 │   ├── neural_simulation.py    # Neural data simulation tools
 │   ├── pca_analysis.py         # PCA analysis tools
@@ -319,7 +350,7 @@ If you use this template in your research, please cite:
 @software{python_neuroscience_template,
   title = {Python Template for Neuroscience Data Analysis},
   year = {2025},
-  url = {https://github.com/AngelaRodrizq/python_template}
+  url = {https://github.com/AngelaRodrizq/python_4_neuroscience}
 }
 ```
 

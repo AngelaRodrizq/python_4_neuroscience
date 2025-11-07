@@ -12,8 +12,23 @@ This template will help you:
 
 ## Step 1: Install What You Need
 
-### Install Python
+### Install Conda (Recommended)
 
+**Conda is a package manager that makes it easy to manage Python environments.**
+
+1. Go to https://docs.conda.io/en/latest/miniconda.html
+2. Download Miniconda for your operating system (Python 3.x version)
+3. Run the installer
+   - Follow the installation prompts
+   - On the PATH question, you can choose yes to make conda available in your terminal
+4. Test it worked:
+   - Close and reopen your terminal
+   - Type: `conda --version`
+   - You should see something like "conda 24.1.2"
+
+**Alternative: Install Python directly**
+
+If you prefer not to use conda:
 1. Go to https://www.python.org/downloads/
 2. Download Python 3.10 or newer
 3. Run the installer
@@ -53,15 +68,56 @@ We recommend VS Code:
 
 3. **Download the template:**
    ```bash
-   git clone https://github.com/AngelaRodrizq/python_template.git
+   git clone https://github.com/AngelaRodrizq/python_4_neuroscience.git
    ```
 
 4. **Go into the project folder:**
    ```bash
-   cd python_template
+   cd python_4_neuroscience
    ```
 
-## Step 3: Customize Your Project
+## Step 3: Create a Conda Environment
+
+**This step creates an isolated environment for your project with Python 3.13.**
+
+### Using Conda (Recommended)
+
+```bash
+# Create a new conda environment named 'neuroscience' with Python 3.13
+conda create --name neuroscience python=3.13
+
+# Activate the environment
+conda activate neuroscience
+
+# You should see (neuroscience) appear in your terminal prompt
+```
+
+**What does this do?**
+- Creates a separate Python installation just for this project
+- Prevents conflicts with other Python projects
+- Makes it easy to reproduce your environment later
+
+**To deactivate when you're done working:**
+```bash
+conda deactivate
+```
+
+**Alternative: Using Python's Built-in Virtual Environment**
+
+If you're not using conda:
+
+```bash
+# Create a virtual environment
+python -m venv venv
+
+# Activate it
+# On Mac/Linux:
+source venv/bin/activate
+# On Windows:
+venv\Scripts\activate
+```
+
+## Step 4: Customize Your Project
 
 Run the setup script - it will help you rename the package:
 
@@ -74,7 +130,7 @@ python setup_project.py
 - Use lowercase letters and underscores
 - Examples: `my_neural_data`, `spike_analysis`, `brain_signals`
 
-## Step 4: Install Your Package
+## Step 5: Install Your Package
 
 After running the setup script, install your package:
 
@@ -90,7 +146,7 @@ pip install -e ".[develop,notebooks]"
 - Machine learning (scikit-learn)
 - Testing your code (pytest)
 
-## Step 5: Test Everything Works
+## Step 6: Test Everything Works
 
 ```bash
 pytest
@@ -98,7 +154,7 @@ pytest
 
 You should see output ending with "5 passed". If you do, congratulations! Everything is set up correctly! 🎉
 
-## Step 6: Start Learning!
+## Step 7: Start Learning!
 
 ### Try the Tutorial Notebook
 
@@ -165,7 +221,30 @@ python -m pip install -e ".[develop,notebooks]"
 
 ## Advanced Tips
 
-### Using a Virtual Environment
+### Managing Your Conda Environment
+
+**To activate your environment again later:**
+```bash
+conda activate neuroscience
+```
+
+**To deactivate when done working:**
+```bash
+conda deactivate
+```
+
+**To see all your conda environments:**
+```bash
+conda env list
+```
+
+**To delete the environment if you want to start fresh:**
+```bash
+conda deactivate  # Make sure you're not in the environment first
+conda env remove --name neuroscience
+```
+
+### Using a Virtual Environment (Alternative to Conda)
 
 A virtual environment keeps your project's dependencies separate. This is a good practice:
 
