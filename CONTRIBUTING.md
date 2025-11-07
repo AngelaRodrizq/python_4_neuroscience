@@ -9,11 +9,13 @@ If this is your first time contributing to a code project, don't worry! Here's a
 ### Understanding the Project
 
 This template helps you:
+
 - Write clean, well-organized Python code
 - Analyze neuroscience data (like spike trains and neural activity)
 - Learn professional coding practices
 
 Before making changes, make sure you understand:
+
 - What the code currently does
 - How your change will improve it
 - How to test that your change works
@@ -21,6 +23,7 @@ Before making changes, make sure you understand:
 ### Making Your First Change
 
 1. **Make sure everything is set up:**
+
    ```bash
    # If you haven't already, run the setup script
    python setup_project.py
@@ -30,6 +33,9 @@ Before making changes, make sure you understand:
    ```
 
 2. **Create a new branch for your changes:**
+
+Run the following code or, alternatively, use the VS Code interface to create a branch of your own. The idea is that for any changes you want to make to the repository, you create a branch. Once everything is working, you create a pull request in the Github website.
+
    ```bash
    # Give your branch a descriptive name
    git checkout -b add-new-feature
@@ -41,6 +47,7 @@ Before making changes, make sure you understand:
    - Add comments if your code does something complex
 
 4. **Test your changes:**
+
    ```bash
    # Run all tests
    pytest
@@ -50,6 +57,7 @@ Before making changes, make sure you understand:
    ```
 
 5. **Commit your changes:**
+
    ```bash
    # Stage your changes
    git add .
@@ -65,12 +73,14 @@ Before making changes, make sure you understand:
 **For beginners:** If you haven't customized the template yet, follow these steps:
 
 **Step 1: Clone the repository (if you haven't already)**
+
 ```bash
 git clone https://github.com/AngelaRodrizq/python_4_neuroscience.git
 cd python_4_neuroscience
 ```
 
 **Step 2: Create a conda environment (recommended)**
+
 ```bash
 # Create a new conda environment with Python 3.13
 conda create --name neuroscience python=3.13
@@ -80,6 +90,7 @@ conda activate neuroscience
 ```
 
 **Alternative: Using Python's built-in virtual environment**
+
 ```bash
 # Create a virtual environment
 python -m venv venv
@@ -92,12 +103,14 @@ venv\Scripts\activate
 ```
 
 **Step 3: Customize the package name (optional)**
+
 ```bash
 # This helps you rename the package to match your project
 python setup_project.py
 ```
 
 **Step 4: Install all development tools**
+
 ```bash
 # Install the package in development mode with all dependencies
 pip install -e ".[develop,notebooks]"
@@ -107,6 +120,7 @@ pre-commit install
 ```
 
 **What does this do?**
+
 - `pip install -e ".[develop,notebooks]"` installs your package plus all tools needed for development
 - `pre-commit install` sets up automatic code checking whenever you commit changes
 
@@ -142,6 +156,7 @@ pytest
 ### 2. Testing
 
 All new features should include tests. **Why?** Tests help ensure:
+
 - Your code works correctly
 - Future changes don't break your feature
 - Others can trust your code
@@ -183,6 +198,7 @@ pytest tests/test_neural_simulation.py -v
 ### 3. Pre-commit Hooks
 
 The pre-commit hooks will automatically:
+
 - Format code with Black
 - Lint with Ruff
 - Check for common issues
@@ -223,12 +239,14 @@ python_4_neuroscience/
 This template is designed to teach best practices in scientific Python:
 
 - **Type Hints**: Help catch errors early and make code more understandable
+
   ```python
   def process_data(spike_times: list[float]) -> np.ndarray:
       # The type hints (list[float] and np.ndarray) tell you what goes in and out
   ```
 
 - **Docstrings**: Document what functions do so others (and future you!) can understand them
+
   ```python
   def analyze_spikes(data):
       """
@@ -243,6 +261,7 @@ This template is designed to teach best practices in scientific Python:
   ```
 
 - **Tests**: Ensure code works as expected and doesn't break when you make changes
+
   ```python
   def test_my_function():
       result = my_function(test_input)
@@ -254,29 +273,16 @@ This template is designed to teach best practices in scientific Python:
 - **Version Control**: Use git to track changes, try new ideas safely, and collaborate
 
 **Remember:** Everyone starts as a beginner! Don't hesitate to:
+
 - Ask questions in issues
 - Look at existing code for examples
 - Start with small changes
 - Learn by doing
 
-## Run CI Locally
-
-To run the CI pipeline locally:
-
-Setup (make sure docker is installed):
-```bash
-brew install act  # macOS
-# or use appropriate package manager for your OS
-```
-
-Run the workflow:
-```bash
-act -j develop
-```
-
 ## Questions?
 
 If you have questions about contributing, please:
+
 1. Check existing issues and discussions
 2. Review the README and documentation
 3. Open a new issue with your question
