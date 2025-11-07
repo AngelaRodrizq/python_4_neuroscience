@@ -2,6 +2,8 @@
 
 This is a modern Python package template designed for neuroscience students and researchers to get started with neural data analysis and coding.
 
+> **👋 Never programmed before?** Start with our [QUICKSTART.md](QUICKSTART.md) guide for absolute beginners!
+
 ## 🎓 For Students: First Time Setup
 
 If you're new to Python or programming, follow these steps carefully:
