@@ -2,6 +2,112 @@
 
 This is a modern Python package template designed for neuroscience students and researchers to get started with neural data analysis and coding.
 
+> **👋 Never programmed before?** Start with our [QUICKSTART.md](QUICKSTART.md) guide for absolute beginners!
+
+## 🎓 For Students: First Time Setup
+
+If you're new to Python or programming, follow these steps carefully:
+
+### Prerequisites
+
+Before you begin, make sure you have:
+- **Python 3.10 or newer** installed ([Download here](https://www.python.org/downloads/))
+  - To check: Open a terminal and type `python --version` or `python3 --version`
+- **Git** installed ([Download here](https://git-scm.com/downloads))
+  - To check: Type `git --version` in your terminal
+- **A text editor** like VS Code ([Download here](https://code.visualstudio.com/))
+
+### Step-by-Step Setup for Beginners
+
+#### 1. Get a Copy of This Template
+
+```bash
+# Open your terminal (Command Prompt on Windows, Terminal on Mac/Linux)
+
+# Navigate to where you want to create your project
+cd ~/Documents  # or wherever you keep your projects
+
+# Download this template
+git clone https://github.com/AngelaRodrizq/python_template.git
+
+# Go into the project folder
+cd python_template
+```
+
+#### 2. Customize Your Package Name
+
+**This is important!** You should rename the package to match your project.
+
+```bash
+# Run the setup script - it will guide you through the process
+python setup_project.py
+```
+
+The script will ask you to choose a package name. For example:
+- If you're analyzing spike data: `spike_analyzer`
+- If you're working with calcium imaging: `calcium_analysis`
+- If you're doing general neural analysis: `my_neural_analysis`
+
+**Rules for package names:**
+- Use only lowercase letters
+- Use underscores (`_`) instead of spaces
+- Start with a letter, not a number
+- Good: `spike_analyzer`, `neural_data_tools`
+- Bad: `Spike-Analyzer`, `123data`, `my package`
+
+#### 3. Install Your Package
+
+After running the setup script, install your newly named package:
+
+```bash
+# Install in "editable" mode so you can modify the code
+pip install -e ".[develop,notebooks]"
+```
+
+**What does this do?**
+- `-e` means "editable" - changes you make to the code will take effect immediately
+- `.[develop,notebooks]` installs your package plus development tools and Jupyter
+
+This might take a few minutes as it downloads required libraries.
+
+#### 4. Verify Everything Works
+
+```bash
+# Run the tests to make sure everything is set up correctly
+pytest
+
+# You should see output like "5 passed" - that means it worked!
+```
+
+#### 5. Start Exploring!
+
+Try opening one of the example notebooks:
+
+```bash
+# Start Jupyter
+jupyter notebook
+
+# Then open: notebooks/neural_data_analysis_tutorial.ipynb
+```
+
+### 🆘 Common Issues for Beginners
+
+**"python: command not found"**
+- Try `python3` instead of `python`
+- Make sure Python is installed and added to your PATH
+
+**"pip: command not found"**
+- Try `pip3` instead of `pip`
+- Or use: `python -m pip` or `python3 -m pip`
+
+**"Permission denied" errors**
+- On Mac/Linux, don't use `sudo` with pip
+- Consider using a virtual environment (see Advanced Setup below)
+
+**Tests are failing**
+- Make sure you ran `pip install -e ".[develop]"` first
+- Try reinstalling: `pip install -e ".[develop]" --force-reinstall`
+
 ## Features
 
 ### 2025 Best Practices
@@ -20,12 +126,17 @@ This is a modern Python package template designed for neuroscience students and 
 
 ## Quick Start
 
-### Installation
+> **New to Python?** See the [🎓 For Students: First Time Setup](#-for-students-first-time-setup) section above for detailed beginner instructions!
+
+### Quick Installation (For Experienced Users)
 
 ```bash
 # Clone the repository
 git clone https://github.com/AngelaRodrizq/python_template.git
 cd python_template
+
+# Customize the package name (optional but recommended)
+python setup_project.py
 
 # Install the package in development mode
 pip install -e ".[develop,notebooks]"
@@ -148,19 +259,35 @@ This template is designed to help you:
 
 ## Customization
 
-To adapt this template for your own project:
+### Easy Method: Use the Setup Script (Recommended for Beginners)
+
+The easiest way to customize this template is to use the included setup script:
+
+```bash
+python setup_project.py
+```
+
+This interactive script will:
+- Guide you through choosing a package name
+- Automatically update all files with your new package name
+- Rename directories appropriately
+- Offer to install the package for you
+
+### Manual Method: For Advanced Users
+
+If you prefer to customize manually:
 
 1. Replace `python_pkg_template` with your package name in:
-   - `pyproject.toml`
-   - `src/` directory name
-   - Import statements
-   - Documentation
+   - `pyproject.toml` (the `name` and `[tool.setuptools.package-data]` fields)
+   - Rename `src/python_pkg_template/` directory to `src/your_package_name/`
+   - Update import statements in all Python files
+   - Update references in documentation and notebooks
 
 2. Update metadata in `pyproject.toml`:
    - `name`
    - `description`
    - `authors`
-   - `dependencies`
+   - `dependencies` (if needed)
 
 3. Customize the modules to your specific needs
 
