@@ -2,6 +2,9 @@
     "editor.formatOnSave": true,
     "python.formatting.provider": "black",
     "editor.codeActionsOnSave": {
-        "source.organizeImports": true
-    }
+        "source.organizeImports": "explicit"
+    },
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "python-envs.pythonProjects": []
 }

@@ -26,7 +26,7 @@ Before you begin, make sure you have:
 # Open your terminal (Command Prompt on Windows, Terminal on Mac/Linux)
 
 # Navigate to where you want to create your project
-cd ~/Documents  # or wherever you keep your projects
+cd ~  # or wherever you keep your projects
 
 # Download this template
 git clone https://github.com/AngelaRodrizq/python_4_neuroscience.git
