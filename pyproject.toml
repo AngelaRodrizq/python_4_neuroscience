@@ -1,5 +1,5 @@
 [project]
-name = "python-pkg-template"
+name = "python-4-neuroscience"
 version = "0.1.0"
 description = "A Python Package Template for Neuroscience Data Analysis"
 readme = "README.md"
