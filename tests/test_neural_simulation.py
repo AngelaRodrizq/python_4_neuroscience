@@ -3,7 +3,7 @@ Tests for the neural_simulation module.
 """
 
 import numpy as np
-from python_pkg_template.neural_simulation import (
+from python_4_neuroscience.neural_simulation import (
     generate_spike_train,
     generate_neural_population,
     generate_lfp_signal,
