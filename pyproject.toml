@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = {file = "LICENSE.txt"}
 authors = [
-  {email = "baeisner@andrew.cmu.edu", name = "Ben Eisner"}
+  {email = "angelarodriguez@princeton.edu", name = "Angela Rodriguez"}
 ]
 dependencies = [
   "numpy >= 1.26.0",
