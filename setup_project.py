@@ -8,6 +8,7 @@ all necessary files to use your chosen package name.
 
 import os
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -173,8 +174,15 @@ def main():
     install = input("Would you like to install the package now? (yes/no): ").strip().lower()
     if install in ['yes', 'y']:
         print("\nInstalling package...")
-        os.system('pip install -e ".[develop]"')
-        print("\n✓ Installation complete!")
+        try:
+            subprocess.run(
+                [sys.executable, "-m", "pip", "install", "-e", ".[develop]"],
+                check=True
+            )
+            print("\n✓ Installation complete!")
+        except subprocess.CalledProcessError:
+            print("\n⚠️  Installation failed. You can try again manually with:")
+            print('    pip install -e ".[develop]"')
 
 
 if __name__ == "__main__":
