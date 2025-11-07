@@ -3,7 +3,7 @@ Tests for the pca_analysis module.
 """
 
 import numpy as np
-from python_pkg_template.pca_analysis import (
+from python_4_neuroscience.pca_analysis import (
     prepare_data_for_pca,
     perform_pca,
 )
