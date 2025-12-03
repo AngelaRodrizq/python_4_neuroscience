@@ -5,6 +5,7 @@ Welcome! This guide will help you get started with this Python template, even if
 ## What You'll Learn
 
 This template will help you:
+
 - Write professional Python code
 - Analyze neuroscience data (like neural spike trains)
 - Learn modern programming practices
@@ -16,7 +17,7 @@ This template will help you:
 
 **Conda is a package manager that makes it easy to manage Python environments.**
 
-1. Go to https://docs.conda.io/en/latest/miniconda.html
+1. Go to <https://docs.conda.io/en/latest/miniconda.html>
 2. Download Miniconda for your operating system (Python 3.x version)
 3. Run the installer
    - Follow the installation prompts
@@ -29,7 +30,8 @@ This template will help you:
 **Alternative: Install Python directly**
 
 If you prefer not to use conda:
-1. Go to https://www.python.org/downloads/
+
+1. Go to <https://www.python.org/downloads/>
 2. Download Python 3.10 or newer
 3. Run the installer
    - ⚠️ **Important on Windows:** Check the box that says "Add Python to PATH"
@@ -40,7 +42,7 @@ If you prefer not to use conda:
 
 ### Install Git
 
-1. Go to https://git-scm.com/downloads
+1. Go to <https://git-scm.com/downloads>
 2. Download and install Git for your operating system
 3. Test it worked:
    - In your terminal, type: `git --version`
@@ -49,7 +51,8 @@ If you prefer not to use conda:
 ### Install a Code Editor (Optional but Recommended)
 
 We recommend VS Code:
-1. Go to https://code.visualstudio.com/
+
+1. Go to <https://code.visualstudio.com/>
 2. Download and install it
 3. Open VS Code and install the Python extension
 
@@ -58,6 +61,7 @@ We recommend VS Code:
 1. **Open your terminal**
 
 2. **Navigate to where you want to keep your projects:**
+
    ```bash
    # On Mac/Linux:
    cd ~/Documents
@@ -67,11 +71,13 @@ We recommend VS Code:
    ```
 
 3. **Download the template:**
+
    ```bash
    git clone https://github.com/AngelaRodrizq/python_4_neuroscience.git
    ```
 
 4. **Go into the project folder:**
+
    ```bash
    cd python_4_neuroscience
    ```
@@ -93,11 +99,13 @@ conda activate neuroscience
 ```
 
 **What does this do?**
+
 - Creates a separate Python installation just for this project
 - Prevents conflicts with other Python projects
 - Makes it easy to reproduce your environment later
 
 **To deactivate when you're done working:**
+
 ```bash
 conda deactivate
 ```
@@ -126,6 +134,7 @@ python setup_project.py
 ```
 
 **What to enter:**
+
 - When asked for a package name, choose something that describes your project
 - Use lowercase letters and underscores
 - Examples: `my_neural_data`, `spike_analysis`, `brain_signals`
@@ -140,6 +149,7 @@ pip install -e ".[develop,notebooks]"
 ```
 
 **This might take a few minutes.** It's downloading libraries for:
+
 - Number crunching (numpy)
 - Scientific computing (scipy)
 - Making graphs (matplotlib)
@@ -154,7 +164,7 @@ pytest
 
 You should see output ending with "5 passed". If you do, congratulations! Everything is set up correctly! 🎉
 
-## Step 7: Start Learning!
+## Step 7: Start Learning
 
 ### Try the Tutorial Notebook
 
@@ -163,6 +173,7 @@ jupyter notebook
 ```
 
 This will open a web browser. Click on:
+
 - `notebooks/`
 - `neural_data_analysis_tutorial.ipynb`
 
@@ -171,7 +182,7 @@ This will open a web browser. Click on:
 Create a new file called `my_first_script.py`:
 
 ```python
-# Import from your package (use YOUR package name, not python_pkg_template)
+# Import from your package (use YOUR package name, not python_4_neuroscience)
 from your_package_name.neural_simulation import generate_spike_train
 
 # Generate some fake spike data
@@ -183,6 +194,7 @@ print(f"First 5 spike times: {spike_times[:5]}")
 ```
 
 Run it:
+
 ```bash
 python my_first_script.py
 ```
@@ -192,6 +204,7 @@ python my_first_script.py
 ### "python: command not found"
 
 Try `python3` instead:
+
 ```bash
 python3 setup_project.py
 python3 -m pip install -e ".[develop,notebooks]"
@@ -200,6 +213,7 @@ python3 -m pip install -e ".[develop,notebooks]"
 ### "pip: command not found"
 
 Try:
+
 ```bash
 python -m pip install -e ".[develop,notebooks]"
 ```
@@ -207,6 +221,7 @@ python -m pip install -e ".[develop,notebooks]"
 ### "Permission denied"
 
 **Don't use `sudo`!** Instead, you might need to:
+
 1. Make sure Python is installed for your user
 2. Or use a virtual environment (see Advanced Tips below)
 
@@ -215,6 +230,7 @@ python -m pip install -e ".[develop,notebooks]"
 1. Make sure you ran the installation command
 2. Make sure you ran the setup script first
 3. Try reinstalling:
+
    ```bash
    pip install -e ".[develop,notebooks]" --force-reinstall
    ```
@@ -224,21 +240,25 @@ python -m pip install -e ".[develop,notebooks]"
 ### Managing Your Conda Environment
 
 **To activate your environment again later:**
+
 ```bash
 conda activate neuroscience
 ```
 
 **To deactivate when done working:**
+
 ```bash
 conda deactivate
 ```
 
 **To see all your conda environments:**
+
 ```bash
 conda env list
 ```
 
 **To delete the environment if you want to start fresh:**
+
 ```bash
 conda deactivate  # Make sure you're not in the environment first
 conda env remove --name neuroscience
@@ -263,19 +283,21 @@ pip install -e ".[develop,notebooks]"
 ```
 
 When you're done working:
+
 ```bash
 deactivate
 ```
 
 ### Learning More
 
-- **Python basics**: Try https://www.learnpython.org/
-- **Numpy tutorial**: https://numpy.org/doc/stable/user/quickstart.html
-- **Jupyter notebooks**: https://jupyter-notebook-beginner-guide.readthedocs.io/
+- **Python basics**: Try <https://www.learnpython.org/>
+- **Numpy tutorial**: <https://numpy.org/doc/stable/user/quickstart.html>
+- **Jupyter notebooks**: <https://jupyter-notebook-beginner-guide.readthedocs.io/>
 
 ## Getting Help
 
 If you're stuck:
+
 1. Read the error message carefully - it often tells you what's wrong
 2. Copy the error message and search for it online
 3. Check the main [README.md](README.md) for more details
