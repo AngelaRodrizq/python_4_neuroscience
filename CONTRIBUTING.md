@@ -121,7 +121,7 @@ pytest
 pytest -v
 
 # Run tests with coverage (shows which lines of code were tested)
-pytest --cov=src/python_pkg_template
+pytest --cov=src/python_4_neuroscience
 
 # Run only one test file
 pytest tests/test_neural_simulation.py -v

@@ -49,9 +49,9 @@ def get_package_name() -> str:
             print("   Must start with a letter.\n")
             continue
         
-        if name == "python_pkg_template":
+        if name == "python_4_neuroscience":
             print("⚠️  You're using the default name. Consider choosing a more specific name.\n")
-            confirm = input("Continue with 'python_pkg_template'? (yes/no): ").strip().lower()
+            confirm = input("Continue with 'python_4_neuroscience'? (yes/no): ").strip().lower()
             if confirm in ['yes', 'y']:
                 return name
             continue
@@ -71,7 +71,7 @@ def update_file_content(file_path: Path, old_name: str, new_name: str) -> bool:
         
         # Replace various forms of the package name
         replacements = [
-            (old_name, new_name),  # python_pkg_template -> new_name
+            (old_name, new_name),  # python_4_neuroscience -> new_name
             (old_name.replace('_', '-'), new_name.replace('_', '-')),  # python-pkg-template
         ]
         
@@ -101,14 +101,14 @@ def main():
     project_root = Path(__file__).parent.absolute()
     os.chdir(project_root)
     
-    old_package_name = "python_pkg_template"
+    old_package_name = "python_4_neuroscience"
     src_dir = project_root / "src"
     old_package_dir = src_dir / old_package_name
     
     # Check if already customized
     if not old_package_dir.exists():
         print("\n⚠️  It looks like this template has already been customized!")
-        print("The default 'python_pkg_template' directory was not found.")
+        print("The default 'python_4_neuroscience' directory was not found.")
         sys.exit(1)
     
     # Get new package name from user

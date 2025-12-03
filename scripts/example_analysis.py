@@ -7,11 +7,11 @@ This script can be run standalone to see the package in action.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from python_pkg_template.neural_simulation import (
+from python_4_neuroscience.neural_simulation import (
     generate_neural_population,
     generate_lfp_signal,
 )
-from python_pkg_template.pca_analysis import (
+from python_4_neuroscience.pca_analysis import (
     prepare_data_for_pca,
     perform_pca,
     plot_variance_explained,

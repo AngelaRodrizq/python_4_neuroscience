@@ -22,8 +22,8 @@ pip install -e ".[develop,notebooks]"
 ### Basic Example
 
 ```python
-from python_pkg_template.neural_simulation import generate_neural_population
-from python_pkg_template.pca_analysis import prepare_data_for_pca, perform_pca
+from python_4_neuroscience.neural_simulation import generate_neural_population
+from python_4_neuroscience.pca_analysis import prepare_data_for_pca, perform_pca
 
 # Generate simulated neural data
 population = generate_neural_population(
